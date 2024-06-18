@@ -26,9 +26,16 @@ class MainTabBarViewController: UITabBarController {
         searchVC.title = "Search"
         libraryVC.title = "Library"
         
+        homeVC.navigationItem.largeTitleDisplayMode = .always
+        searchVC.navigationItem.largeTitleDisplayMode = .always
+        libraryVC.navigationItem.largeTitleDisplayMode = .always
+        
+        homeVC.navigationBar.prefersLargeTitles = true
+        searchVC.navigationBar.prefersLargeTitles = true
+        libraryVC.navigationBar.prefersLargeTitles = true
         
         tabBar.tintColor = .label
-        tabBar.backgroundColor = .systemGray6
+        tabBar.backgroundColor = .tertiarySystemBackground
         
         setViewControllers([homeVC, searchVC, libraryVC], animated: true)
         
