@@ -19,6 +19,9 @@
 		9DA3F0AD2C21664500143FC3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3F0AC2C21664500143FC3 /* HomeViewController.swift */; };
 		9DA3F0AF2C21664F00143FC3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3F0AE2C21664F00143FC3 /* SearchViewController.swift */; };
 		9DA3F0B12C21667300143FC3 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3F0B02C21667300143FC3 /* LibraryViewController.swift */; };
+		9DA3F0B62C21995600143FC3 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3F0B52C21995600143FC3 /* AuthManager.swift */; };
+		9DA3F0B92C2199A300143FC3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3F0B82C2199A300143FC3 /* WelcomeViewController.swift */; };
+		9DA3F0BB2C228A4500143FC3 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3F0BA2C228A4500143FC3 /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		9DA3F0AC2C21664500143FC3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9DA3F0AE2C21664F00143FC3 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9DA3F0B02C21667300143FC3 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		9DA3F0B52C21995600143FC3 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		9DA3F0B82C2199A300143FC3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		9DA3F0BA2C228A4500143FC3 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,7 @@
 		9DA3F0A72C21606F00143FC3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9DA3F0B72C21999400143FC3 /* General */,
 				9DA3F0B42C21669C00143FC3 /* Core */,
 			);
 			path = Controllers;
@@ -159,6 +166,7 @@
 		9DA3F0AA2C21609200143FC3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				9DA3F0B52C21995600143FC3 /* AuthManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -182,6 +190,15 @@
 				9DA3F0B02C21667300143FC3 /* LibraryViewController.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		9DA3F0B72C21999400143FC3 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				9DA3F0B82C2199A300143FC3 /* WelcomeViewController.swift */,
+				9DA3F0BA2C228A4500143FC3 /* AuthViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +331,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA3F0B92C2199A300143FC3 /* WelcomeViewController.swift in Sources */,
 				9DA3F0AF2C21664F00143FC3 /* SearchViewController.swift in Sources */,
+				9DA3F0BB2C228A4500143FC3 /* AuthViewController.swift in Sources */,
+				9DA3F0B62C21995600143FC3 /* AuthManager.swift in Sources */,
 				9DA3F0AD2C21664500143FC3 /* HomeViewController.swift in Sources */,
 				9D1814CE2C1FEFF000FA5E00 /* MainTabBarViewController.swift in Sources */,
 				9D1814CA2C1FEFF000FA5E00 /* AppDelegate.swift in Sources */,
