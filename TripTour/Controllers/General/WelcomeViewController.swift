@@ -71,7 +71,9 @@ class WelcomeViewController: UIViewController {
         let authVC = AuthViewController()
         
         authVC.navigationItem.largeTitleDisplayMode = .always
-        navigationController?.pushViewController(authVC, animated: true)
+        authVC.modalPresentationStyle = .popover
+//        navigationController?.pushViewController(authVC, animated: true)
+        present(authVC, animated: true)
     }
     
     private func configureConstraints() {

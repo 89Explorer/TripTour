@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -14,25 +15,45 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+        self.setupWindow(with: scene)
+        self.checkAuthentication()
+        
+//        guard let windowScene = (scene as? UIWindowScene) else { return }
+//        window = UIWindow(windowScene: windowScene)
+//        let mainTabBarVC = MainTabBarViewController()
+//        if AuthManager.shared.isSignedIn == true {
+//            window?.rootViewController = mainTabBarVC
+//            window?.rootViewController = UINavigationController(rootViewController: RegisterViewController())
+//        } else {
+//            let welcomeVC = UINavigationController(rootViewController: WelcomeViewController())
+//            welcomeVC.navigationBar.prefersLargeTitles = true
+//            welcomeVC.viewControllers.first?.navigationItem.largeTitleDisplayMode = .always
+//            window?.rootViewController = welcomeVC
+//        }
+//        
+//        window?.rootViewController = MainTabBarViewController()
+//        window?.makeKeyAndVisible()
+    }
+    
+    private func setupWindow(with scene: UIScene) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-//        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-//        window?.windowScene = windowScene
-        
-        window = UIWindow(windowScene: windowScene)
-        
-        let mainTabBarVC = MainTabBarViewController()
-        
-        if AuthManager.shared.isSignedIn == true {
-            window?.rootViewController = mainTabBarVC
-        } else {
+        let window = UIWindow(windowScene: windowScene)
+        self.window = window
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func checkAuthentication() {
+        if Auth.auth().currentUser == nil {
+            // Go to sign in screen
             let welcomeVC = UINavigationController(rootViewController: WelcomeViewController())
             welcomeVC.navigationBar.prefersLargeTitles = true
             welcomeVC.viewControllers.first?.navigationItem.largeTitleDisplayMode = .always
             window?.rootViewController = welcomeVC
+        } else {
+            // Go to home screen
+            let mainTabBarVC = MainTabBarViewController()
+            window?.rootViewController = mainTabBarVC
         }
-        
-//        window?.rootViewController = MainTabBarViewController()
-        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
