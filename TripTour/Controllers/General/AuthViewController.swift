@@ -10,6 +10,9 @@ import UIKit
 class AuthViewController: UIViewController {
     
     
+    
+    
+    
     // MARK: - UI Components
     private let headerView: AuthHeaderView = {
         let headerView = AuthHeaderView(title: "Sign In", subTitle: "Sign in to your account")
@@ -76,29 +79,32 @@ class AuthViewController: UIViewController {
         configureConstraints()
     }
     
+    // 네비게이션 바 아이템 (뒤로가기) 숨기기 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
     }
+    
     
     // MARK: - Functions
     @objc private func didTapLogin() {
         print("didTapLogin() called")
-        let HomeVC = HomeViewController()
-        self.present(HomeVC, animated: true)
     }
     
     @objc private func didTapNewUser() {
         print("didTapNewUser() called")
         
-        let registerVC = RegisterViewController()
-        self.navigationController?.pushViewController(registerVC, animated: true)
+        let registerVC = UINavigationController(rootViewController: RegisterViewController())
+        registerVC.modalPresentationStyle = .fullScreen
+        self.present(registerVC, animated: true)
     }
     
     @objc private func didTapForgotPassword() {
         print("didTapForgotPassword() called")
         
-        let forgotPasswordVC = ForgotPasswordViewController()
-        self.navigationController?.pushViewController(forgotPasswordVC, animated: true)
+        let forgotPasswordVC = UINavigationController(rootViewController:  ForgotPasswordViewController())
+        
+        present(forgotPasswordVC, animated: true)
     }
     
     // 빈화면 누르면 키보드 자동으로 내려가기 설정
@@ -118,7 +124,7 @@ class AuthViewController: UIViewController {
         ]
         
         let useremailTextFieldConstraints = [
-            useremailTextField.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 10),
+            useremailTextField.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 50),
             useremailTextField.centerXAnchor.constraint(equalTo: headerView.centerXAnchor),
             useremailTextField.heightAnchor.constraint(equalToConstant: 55),
             useremailTextField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.85)

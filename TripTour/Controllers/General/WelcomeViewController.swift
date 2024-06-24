@@ -9,6 +9,7 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
+    // MARK: - UI Components
     private let mainLabeltext: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -50,6 +51,7 @@ class WelcomeViewController: UIViewController {
         return button
     }()
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -59,21 +61,21 @@ class WelcomeViewController: UIViewController {
         view.addSubview(signInImageView)
         view.addSubview(subLabeltext)
         
-
-        
         signInButton.addTarget(self, action: #selector(didTapSignInButton), for: .touchUpInside)
         
         configureConstraints()
     }
+
 
     
     @objc private func didTapSignInButton() {
         let authVC = AuthViewController()
         
         authVC.navigationItem.largeTitleDisplayMode = .always
-        authVC.modalPresentationStyle = .popover
-//        navigationController?.pushViewController(authVC, animated: true)
-        present(authVC, animated: true)
+//        authVC.modalPresentationStyle = .popover
+        navigationController?.pushViewController(authVC, animated: true)
+        //present(authVC, animated: true)
+
     }
     
     private func configureConstraints() {

@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        // 비밀번호 정규식 확인 
+        // print("DEBUG PRINT", AuthManager.isValidPassword(for: "Password1!"))
+        
         return true
     }
 

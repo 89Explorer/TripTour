@@ -44,10 +44,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func checkAuthentication() {
         if Auth.auth().currentUser == nil {
+            
             // Go to sign in screen
             let welcomeVC = UINavigationController(rootViewController: WelcomeViewController())
             welcomeVC.navigationBar.prefersLargeTitles = true
+            welcomeVC.modalPresentationStyle = .overFullScreen
             welcomeVC.viewControllers.first?.navigationItem.largeTitleDisplayMode = .always
+            
             window?.rootViewController = welcomeVC
         } else {
             // Go to home screen

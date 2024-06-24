@@ -43,6 +43,9 @@
 		9DA3F0E12C243D6000143FC3 /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3F0E02C243D6000143FC3 /* LoginUserRequest.swift */; };
 		9DA3F0E22C243D6000143FC3 /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3F0E02C243D6000143FC3 /* LoginUserRequest.swift */; };
 		9DA3F0E32C243D6000143FC3 /* LoginUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3F0E02C243D6000143FC3 /* LoginUserRequest.swift */; };
+		9DA3F0E52C247F7700143FC3 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3F0E42C247F7700143FC3 /* RegisterViewViewModel.swift */; };
+		9DA3F0E62C247F7700143FC3 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3F0E42C247F7700143FC3 /* RegisterViewViewModel.swift */; };
+		9DA3F0E72C247F7700143FC3 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3F0E42C247F7700143FC3 /* RegisterViewViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,7 @@
 		9DA3F0C82C24261B00143FC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9DA3F0DC2C242EAA00143FC3 /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
 		9DA3F0E02C243D6000143FC3 /* LoginUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUserRequest.swift; sourceTree = "<group>"; };
+		9DA3F0E42C247F7700143FC3 /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +153,7 @@
 			children = (
 				9DA3F0AB2C2160B800143FC3 /* Resources */,
 				9DA3F0DB2C242DDC00143FC3 /* Models */,
-				9DA3F0AA2C21609200143FC3 /* Managers */,
+				9DA3F0AA2C21609200143FC3 /* Networking */,
 				9DA3F0A92C21608700143FC3 /* ViewModels */,
 				9DA3F0A82C21607F00143FC3 /* Views */,
 				9DA3F0A72C21606F00143FC3 /* Controllers */,
@@ -200,16 +204,17 @@
 		9DA3F0A92C21608700143FC3 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				9DA3F0E42C247F7700143FC3 /* RegisterViewViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		9DA3F0AA2C21609200143FC3 /* Managers */ = {
+		9DA3F0AA2C21609200143FC3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				9DA3F0B52C21995600143FC3 /* AuthManager.swift */,
 			);
-			path = Managers;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		9DA3F0AB2C2160B800143FC3 /* Resources */ = {
@@ -406,6 +411,7 @@
 				9DA3F0BF2C23D90400143FC3 /* AuthHeaderView.swift in Sources */,
 				9DA3F0B62C21995600143FC3 /* AuthManager.swift in Sources */,
 				9DA3F0AD2C21664500143FC3 /* HomeViewController.swift in Sources */,
+				9DA3F0E52C247F7700143FC3 /* RegisterViewViewModel.swift in Sources */,
 				9D1814CE2C1FEFF000FA5E00 /* MainTabBarViewController.swift in Sources */,
 				9D1814CA2C1FEFF000FA5E00 /* AppDelegate.swift in Sources */,
 				9DA3F0C52C241D7500143FC3 /* RegisterViewController.swift in Sources */,
@@ -424,6 +430,7 @@
 			files = (
 				9D1814E42C1FEFF100FA5E00 /* TripTourTests.swift in Sources */,
 				9DA3F0DE2C242EAA00143FC3 /* RegisterUserRequest.swift in Sources */,
+				9DA3F0E62C247F7700143FC3 /* RegisterViewViewModel.swift in Sources */,
 				9DA3F0E22C243D6000143FC3 /* LoginUserRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA3F0E72C247F7700143FC3 /* RegisterViewViewModel.swift in Sources */,
 				9DA3F0E32C243D6000143FC3 /* LoginUserRequest.swift in Sources */,
 				9DA3F0DF2C242EAA00143FC3 /* RegisterUserRequest.swift in Sources */,
 				9D1814F02C1FEFF100FA5E00 /* TripTourUITestsLaunchTests.swift in Sources */,
